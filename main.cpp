@@ -57,7 +57,7 @@ void Keyboard(unsigned char key , int x ,int y) //
 			Projection+=.05;
 			break;
 
-		//Zoom in when the '-' key is pressed
+		//Zoom out when the '-' key is pressed
 		case '-':
 			if (Projection <= 0) break;
 			else Projection -= 0.1;
@@ -140,27 +140,27 @@ void Vertexes(char model)
 		glVertex3f(0.0, -0.8, 2.0);
 		glVertex3f(0.0, -0.2, 2.0);
 		glEnd();
-        glFlush();
+		glFlush();
 
 		//Door opening 
-        glBegin(GL_POLYGON);
-        glColor3f(c6, c5, c4);
-        glVertex3f(-0.5, 0.0, 2.0);
-        glVertex3f(-0.5, -1.0, 2.0);
-        glVertex3f(0.5, -1.0, 2.0);
-        glVertex3f(0.5, 0.0, 2.0);
-        glEnd();
-        glFlush();
+		glBegin(GL_POLYGON);
+		glColor3f(c6, c5, c4);
+		glVertex3f(-0.5, 0.0, 2.0);
+		glVertex3f(-0.5, -1.0, 2.0);
+		glVertex3f(0.5, -1.0, 2.0);
+		glVertex3f(0.5, 0.0, 2.0);
+		glEnd();
+		glFlush();
 
 		//Door opening border
-        glBegin(GL_LINE_LOOP);
-        glColor3f(c1, c4, c6);
-        glVertex3f(-0.5, 0.0, 2.0);
-        glVertex3f(-0.5, -1.0, 2.0);
-        glVertex3f(0.5, -1.0, 2.0);
-        glVertex3f(0.5, 0.0, 2.0);
-        glEnd();
-        glFlush();
+		glBegin(GL_LINE_LOOP);
+		glColor3f(c1, c4, c6);
+		glVertex3f(-0.5, 0.0, 2.0);
+		glVertex3f(-0.5, -1.0, 2.0);
+		glVertex3f(0.5, -1.0, 2.0);
+		glVertex3f(0.5, 0.0, 2.0);
+		glEnd();
+		glFlush();
 
 		//Square wall #1
 		glBegin(GL_POLYGON);
@@ -535,7 +535,7 @@ void handleResize(int w, int h) {
 	glLoadIdentity();
 
 	//Set viewer perspective
-    gluPerspective(60.0, (double)w / (double)h, 1.0, 50.0);
+	gluPerspective(60.0, (double)w / (double)h, 1.0, 50.0);
 }
 
 int main(int argc, char** argv) {
